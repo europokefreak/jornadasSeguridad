@@ -1,0 +1,83 @@
+
+//Estructura
+
+.speakers{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  container-name: card;
+  container-type: inline-size;
+  display: flex;               
+  flex-direction: column; 
+  width: 100%;
+
+    .card-imagen {               
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .card-titulo{
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+
+    .card-descripcion{
+      margin-bottom: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    } 
+}
+
+@media screen and (max-width: 600px) {
+  .card{
+    flex: 1 1 100%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .card{
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    flex: 1 1 calc(33.33% - 2rem);
+  }
+}
+
+
+//Apariencia
+
+.card {
+  background-color: $seguridad-background;
+  overflow: hidden;
+  color: $seguridad-principal;
+  text-align: center;
+  border: none;
+
+    .card-titulo{
+      font-weight: 700;
+    }
+
+    .card-descripcion{
+      font-weight: 600;
+    } 
+}
+
+.card:hover{
+  background-color: $seguridad-contraste-hover;
+
+  .card-titulo{
+    color: $seguridad-contraste;
+  }
+
+  .card-descripcion{
+    color: $seguridad-contraste;
+  }
+}

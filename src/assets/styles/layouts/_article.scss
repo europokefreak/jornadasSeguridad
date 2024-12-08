@@ -1,0 +1,137 @@
+
+//Estructura
+
+.articulo {
+
+  .articulo-imagen {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    margin-bottom: 2rem;  
+    
+    .articulo-imagen-titulo {
+      width: 85%;
+      margin: auto;
+
+      .articulo-imagen-titulo-autor {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  .articulo-main {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+:where(.articulo-main) .subtitulo {
+  margin-bottom: 1rem;
+}
+
+:where(.articulo-main) .secundaria {
+  max-width: 100%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+
+
+.lista {
+  counter-reset: li;  
+  padding: 0;
+  margin-bottom: 4em;
+}
+
+.lista .elemento{
+  display: block;
+  padding: .4em .4em .4em 2em;
+  margin: .5em 0;
+}
+
+.lista .elemento:before{
+  content: counter(li);
+  counter-increment: li;
+  margin-top: -1.3em;
+  height: 2em;
+  width: 2em;
+}
+
+//Apariencia
+
+.articulo {
+  .articulo-imagen {
+    background-image: url('../images/articulo-principal.jpg?as=webp');
+    background-size: cover;
+    background-position: center;
+    color: $seguridad-menu;
+    font-weight: 700;
+    font-size: 1.5rem; 
+    
+    .articulo-imagen-titulo {
+
+      .articulo-imagen-titulo-autor {
+        text-align: center;
+      }
+    }
+  }
+}
+
+:where(.articulo-main) .subtitulo {
+  font-weight: 700;
+}
+
+//Excepcion
+.cita {
+  font-size: larger;
+  text-align: center;
+}
+
+//Estructura
+.cita:has(.autor){
+  width: 25%;
+  margin-right: 1rem;
+}
+
+//Apariencia
+.cita:has(.autor){
+  float: left;
+  text-align: left;
+}
+
+.lista {
+  list-style: none; 
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+.lista .elemento{
+  position: relative;
+  background: $seguridad-contraste-hover;
+  color: $seguridad-principal;
+  text-decoration: none;
+  border-radius: .3em;
+  transition: all .3s ease-out;   
+}
+
+.lista .elemento:hover{
+  background: $seguridad-contraste-hover;
+}
+
+.lista .elemento:before{
+  position: absolute; 
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background: $seguridad-contraste;
+  line-height: 2em;
+  border: .3em solid $seguridad-menu;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+  transition: all .3s ease-out;
+}
+
+.lista .elemento:hover:before{
+  transform: rotate(360deg);  
+}

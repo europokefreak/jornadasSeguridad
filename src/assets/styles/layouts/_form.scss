@@ -1,0 +1,42 @@
+
+//Estructura
+
+.grafico-container {
+  max-width: 70dvw;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.contenido {
+  width: 70dvw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+}
+
+//Apariencia
+
+.grafico-container {
+  background-color: $seguridad-menu;
+  border: 1px solid $seguridad-contraste-hover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px hwb(0 0% 100% / 0.1);
+}
+
+
+
+.contenido {
+  background-color: $seguridad-background;
+  text-align: justify;
+  font-weight: 400;
+  border-radius: 2rem;
+  box-shadow: 0 4px 6px -1px hwb(0 0% 100% / 0.1),
+  0 2px 4px -1px hwb(0 0% 100% / 0.06);
+} 
+
+.contenido:hover {
+  background-color: $seguridad-contraste-hover;
+}
+
+
+
